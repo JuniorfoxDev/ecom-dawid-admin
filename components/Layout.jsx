@@ -12,7 +12,7 @@ export default function Layout({children}){
         <div className="text-center w-full">
           <button onClick={(e) => {
                       e.preventDefault() 
-                      signIn('google')
+                      signIn("google", { callbackUrl: REDIRECT_URL_AFTER_SIGN_IN });
                       }}  className="bg-white text-black text-2xl p-2 px-4 rounded-lg">Login with Google</button>
         </div>
       </div>
