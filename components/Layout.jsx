@@ -10,7 +10,10 @@ export default function Layout({children}){
     return (
       <div className="w-screen h-screen flex items-center bg-black">
         <div className="text-center w-full">
-          <button onClick={() => signIn('google')} className="bg-white text-black text-2xl p-2 px-4 rounded-lg">Login with Google</button>
+          <button onClick={(e) => {
+                      e.preventDefault() 
+                      signIn('google')
+                      }}  className="bg-white text-black text-2xl p-2 px-4 rounded-lg">Login with Google</button>
         </div>
       </div>
     );
